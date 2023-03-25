@@ -1,0 +1,16 @@
+@font-face{
+    font-family:'rufina-regular';
+    src: url("../fonts/Rufina-Regular.ttf");
+}
+@font-face{
+    font-family:'andada-medium';
+    src: url("../fonts/AndadaPro-Medium.ttf");
+}
+@font-face{
+    font-family:'andada-semibold';
+    src: url("../fonts/AndadaPro-SemiBold.ttf");
+}
+@font-face{
+    font-family:'rufina-bold';
+    src: url("../fonts/Rufina-Bold.ttf");
+}
