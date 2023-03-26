@@ -14,3 +14,7 @@
     font-family:'rufina-bold';
     src: url("../fonts/Rufina-Bold.ttf");
 }
+@font-face{
+    font-family:'andada-extra-bold';
+    src: url("../fonts/AndadaPro-ExtraBold.ttf");
+}

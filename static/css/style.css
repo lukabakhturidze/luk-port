@@ -1,6 +1,8 @@
 :root{
-    --title-font-size: 40px;
-    --title-line-height: 45px;
+    --title-font-size: 50px;
+    --title-line-height: 55px;
+    --secondary-title-font-size: 35px;
+    --secondary-title-line-height: 40px;
     --extra-larger-text-font-size: 23px;
     --extra-larger-text-line-height: 28px;
     --larger-text-font-size: 20px;
@@ -8,6 +10,7 @@
     --standard-text-font-size: 14px;
     --standard-text-line-height: 16px;
     --primary-red:#ff1900; 
+    --primary-text-color: whitesmoke;
 }
 /* my library> */
 .display-flex{
@@ -18,6 +21,9 @@
 }
 .justify-content-space-between{
     justify-content: space-between;
+}
+.justify-content-center{
+    justify-content: center;
 }
 .align-items-center{
     align-items:center;
@@ -30,32 +36,48 @@
 .title-size{
     font-size: var(--title-font-size);
     line-height: var(--title-line-height);
-    font-family:'rufina-bold';
+    font-family:'andada-extra-bold';
+    color: var(--primary-text-color);
 }
 .extra-larger-text-size{
     font-size: var(--extra-larger-text-font-size);
     line-height: var(--extra-larger-text-line-height);
     font-family:'andada-semibold';
+    color: var(--primary-text-color);
 }
 .larger-text-size{
     font-size: var(--larger-text-font-size);
     line-height: var(--larger-text-line-height);
     font-family:'andada-medium';
+    color: var(--primary-text-color);
 }
 .standard-text-size{
     font-size: var(--standard-text-font-size);
     line-height: var(--standard-text-line-height);
     font-family:'rufina-regular';
+    color: var(--primary-text-color);
+}
+.secondary-title-text-size{
+    font-size: var(--secondary-title-font-size);
+    line-height: var(--secondary-title-line-height);
+    color: var(--primary-text-color);
 }
 .red{
     color: var(--primary-red);
+}
+.flex-container{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 /* <for common classes */
 /* for left menu> */
 .left-menu{
     height: 100vh;
-    width: 20vw;
-    position: sticky;
+    width: 18vw;
+    position: fixed;
     top: 0;
     left: 0;
     padding: 4vh 0 3vh 0;
@@ -83,16 +105,17 @@
     width: 75%;
     aspect-ratio: 1 / 1;
     border-radius: 50%;
+    border: 0.5vw solid rgb(118, 125, 137);
 }
 .menu-nav-ul{
     width: 90%;
-    row-gap: 30px;
+    height: 42vh;
     padding: 30px 0;
     border-top: 2px solid var(--primary-red);
     border-bottom: 2px solid var(--primary-red);
 }
 .menu-nav-socials{
-    column-gap: 20px;
+    column-gap: 30px;
 }
 .menu-nav-socials svg{
     transition: all 0.2s ease-out;
@@ -118,10 +141,90 @@
     transform: scale(1.2);
     fill: var(--primary-red);
 }
-/* <forleft  menu */
+/* <for left  menu */
+/* for stream section> */
 .main-stream{
-    width: 80vw;
+    width: 82vw;
+    margin-left:auto;
 }
+.introduction-section{
+    height: 100vh;
+    position: relative;
+    background-image: url("../images/introduction-images/introduction-background-color.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.introduction-texts-wrapper{
+    row-gap: 35px;
+    transform:translateY(-3vh);
+}
+.typing-text-open-window{
+    height: var(--title-line-height);
+    overflow: hidden;
+}
+.typing-texts-ul{
+    margin-left: 10px;
+    overflow: hidden;
+    animation: typing-text-alter 12s steps(2, end) infinite backwards;
+}
+.typing-text{
+    width: 0;
+    /* padding-left: 5%; */
+    display: inline-block;
+    white-space:nowrap;
+    overflow: hidden;
+    border-right: 5px solid var(--primary-text-color);
+    animation: typing-animation 3s steps(20, end) infinite alternate, cursor-animation 0.7s infinite normal forwards;
+}
+.introduction-down-arrow{
+    height: 90px;
+    position: absolute;
+    bottom: 5vh;
+    background-color: inherit;
+}
+.introduction-down-arrow svg{
+    fill:  var(--primary-text-color);
+    animation: introduction-section-down-arrow-animation 1.5s ease-in-out infinite;
+}
+/* <for stream section */
 /* for animations> */
-
+@keyframes introduction-section-down-arrow-animation{
+    0%{
+        opacity: 0;
+        transform: translateY(0);
+    }
+    100%{
+        opacity: 1;
+        fill: var(--primary-red);
+        transform: translateY(60px);
+    }
+}
+@keyframes typing-animation{
+    from{
+        width: 0;
+    }
+    to{
+        width: 107%;
+    }
+}
+@keyframes cursor-animation{
+    0%{
+        border-color: var(--primary-text-color);
+    }
+    50%{
+        border-color: transparent;
+    }
+    100%{
+        border-color: var(--primary-text-color);
+    }
+}
+@keyframes typing-text-alter{
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(-100%);
+    }
+}
 /* <for animations */
