@@ -71,12 +71,12 @@
     .header-nav-ul{
         opacity: 0;
         width: 100vw;
+        height: max-content;
         position: absolute;
         align-items: flex-start;
         row-gap: 1vh;
         bottom: 100%;
         left: 0;
-        height: max-content;
         padding: 2vw 0 2vw 5vw;
         transition: all 0.3s ease-in-out;
     }
