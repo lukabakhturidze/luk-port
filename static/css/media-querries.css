@@ -1,0 +1,161 @@
+:root{
+    --tablet-title-font-size: 25px;
+    --tablet-title-line-height: 40px;
+    --tablet-secondary-title-font-size: 26px;
+    --tablet-secondary-title-line-height: 30px;
+    --tablet-extra-larger-text-font-size: 20px;
+    --tablet-extra-larger-text-line-height: 24px;
+    --tablet-larger-text-font-size: 14px;
+    --tablet-larger-text-line-height: 16px;
+    --tablet-standard-text-font-size: 10px;
+    --tablet-standard-text-line-height: 11px;
+
+    --mobile-title-font-size: 20px;
+    --mobile-title-line-height: 25px;
+    --mobile-secondary-title-font-size: 19px;
+    --mobile-secondary-title-line-height: 22px;
+    --mobile-extra-larger-text-font-size: 18px;
+    --mobile-extra-larger-text-line-height: 20px;
+    --mobile-larger-text-font-size: 12px;
+    --mobile-larger-text-line-height: 14px;
+    --mobile-standard-text-font-size: 9px;
+    --mobile-standard-text-line-height: 11px;
+    --primary-red:#ff1900; 
+}
+@media(max-width: 1200px){
+    .header-nav-socials{
+        column-gap: 15px;
+    }
+}
+@media(max-width: 1024px){
+    /* for common tags> */
+    .title-size{
+        font-size: var(--tablet-title-font-size);
+        line-height: var(--tablet-title-line-height);
+    }
+    .extra-larger-text-size{
+        font-size: var(--tablet-extra-larger-text-font-size);
+        line-height: var(--tablet-extra-larger-text-line-height);
+    }
+    .larger-text-size{
+        font-size: var(--tablet-larger-text-font-size);
+        line-height: var(--tablet-larger-text-line-height);
+    }
+    .standard-text-size{
+        font-size: var(--tablet-standard-text-font-size);
+        line-height: var(--tablet-standard-text-line-height);
+    }
+    .secondary-title-text-size{
+        font-size: var(--tablet-secondary-title-font-size);
+        line-height: var(--tablet-secondary-title-line-height);
+    }
+    /* <for common tags */
+    /* for header> */
+    .left-header{
+        height:auto;
+        width: 100%;
+        padding: 4vh 0;
+        z-index: 3;
+        border-bottom: 2px solid var(--primary-text-color);
+    }
+    .header-profile-part{
+        row-gap: 1.5vh;
+    }
+    .header-profile-part img{
+        display: none;
+    }
+    .left-header-nav{
+        width: 90%;
+        flex-direction: row;
+    }
+    .header-nav-ul{
+        opacity: 0;
+        width: 100vw;
+        position: absolute;
+        align-items: flex-start;
+        row-gap: 1vh;
+        bottom: 100%;
+        left: 0;
+        height: max-content;
+        padding: 2vw 0 2vw 5vw;
+        transition: all 0.3s ease-in-out;
+    }
+    .header-nav-ul li{
+        width: 90%;
+        text-align: left;
+        border-bottom: 1px solid var(--primary-text-color);
+    }
+    .header-nav-ul li:hover{
+        border-color: var(--primary-red);
+    }
+    .header-nav-ul.header-nav-ul-active{
+        opacity: 1;
+        bottom: 0;
+        transform: translateY(100%);
+        transition: all 0.3s ease-in-out;
+    }
+    .header-bottom-wrapper{
+        column-gap: 40px;
+    }
+    .header-nav-socials{
+        column-gap: 4vw;
+    }
+    .burger-menu{
+        display: flex;
+        width: 40px;
+        background-color: transparent;
+        row-gap: 8px;
+        cursor: pointer;
+        border: none;
+    }
+    .burger-menu .line{
+        width: 100%;
+        height: 4px;
+        background-color: var(--primary-text-color);
+    }
+    .typing-text-open-window{
+        height: var(--tablet-title-line-height);
+    }
+    /* <for header */
+    /* for main stream> */
+    .main-stream{
+        width: 100vw;
+    }
+    .introduction-section{
+        height: 100vh;
+    }
+    /* <for main stream */
+}
+@media(max-width: 768px){
+}
+@media(max-width: 500px){
+    /* for common tags> */
+    .header-nav-socials{
+        display: none;
+    }
+    .title-size{
+        font-size: var(--mobile-title-font-size);
+        line-height: var(--mobile-title-line-height);
+    }
+    .extra-larger-text-size{
+        font-size: var(--mobile-extra-larger-text-font-size);
+        line-height: var(--mobile-extra-larger-text-line-height);
+    }
+    .larger-text-size{
+        font-size: var(--mobile-larger-text-font-size);
+        line-height: var(--mobile-larger-text-line-height);
+    }
+    .standard-text-size{
+        font-size: var(--mobile-standard-text-font-size);
+        line-height: var(--mobile-standard-text-line-height);
+    }
+    .secondary-title-text-size{
+        font-size: var(--mobile-secondary-title-font-size);
+        line-height: var(--mobile-secondary-title-line-height);
+    }
+    /* <for common tags> */
+    .typing-text-open-window{
+        overflow: hidden;
+        height: var(--mobile-title-line-height);
+    }
+}
