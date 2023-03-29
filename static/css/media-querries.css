@@ -54,6 +54,7 @@
     .left-header{
         height:auto;
         width: 100%;
+        position: fixed;
         padding: 4vh 0;
         z-index: 3;
         border-bottom: 2px solid var(--primary-text-color);
@@ -69,16 +70,16 @@
         flex-direction: row;
     }
     .header-nav-ul{
-        opacity: 0;
-        width: 100vw;
         height: max-content;
         position: absolute;
+        left: 0;
+        bottom: 100%;
         align-items: flex-start;
         row-gap: 1vh;
-        bottom: 100%;
-        left: 0;
         padding: 2vw 0 2vw 5vw;
         transition: all 0.3s ease-in-out;
+        opacity: 0;
+        z-index: -2;
     }
     .header-nav-ul li{
         width: 90%;
@@ -119,7 +120,7 @@
     /* <for header */
     /* for main stream> */
     .main-stream{
-        width: 100vw;
+        width: 100%;
     }
     .introduction-section{
         height: 100vh;
