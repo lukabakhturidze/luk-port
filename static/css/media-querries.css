@@ -55,12 +55,12 @@
         height:auto;
         width: 100%;
         position: fixed;
-        padding: 4vh 0;
-        z-index: 3;
+        padding: 30px 0;
+        z-index: 1;
         border-bottom: 2px solid var(--primary-text-color);
     }
     .header-profile-part{
-        row-gap: 1.5vh;
+        row-gap: 8px;
     }
     .header-profile-part img{
         display: none;
@@ -75,11 +75,10 @@
         left: 0;
         bottom: 100%;
         align-items: flex-start;
-        row-gap: 1vh;
+        row-gap: 1.8vh;
         padding: 2vw 0 2vw 5vw;
-        transition: all 0.3s ease-in-out;
         opacity: 0;
-        z-index: -2;
+        transition: all 0.3s ease-in-out;
     }
     .header-nav-ul li{
         width: 90%;

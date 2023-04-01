@@ -82,12 +82,13 @@
 /* for left header> */
 .left-header{
     height: 100vh;
-    width: 18vw;
+    width: 18%;
     position: fixed;
     top: 0;
     left: 0;
-    padding: 4vh 0 3vh 0;
+    padding: 35px 0 25px 0;
     background-color: rgb(20, 20, 20);
+    z-index: 1;
 }
 .left-header .title-size,.left-header .extra-larger-text-size,.left-header .larger-text-size,.left-meheadernu .standard-text-size{
     color: white;
@@ -112,11 +113,11 @@
     width: 75%;
     aspect-ratio: 1 / 1;
     border-radius: 50%;
-    border: 0.5vw solid rgb(118, 125, 137);
+    border: 7px solid rgb(118, 125, 137);
 }
 .header-nav-ul{
     width: 100%;
-    height: 42vh;
+    height: 42%;
     padding: 30px 0;
     border-top: 2px solid var(--primary-red);
     border-bottom: 2px solid var(--primary-red);
@@ -156,6 +157,7 @@
 .main-stream{
     width: 82%;
     margin-left:auto;
+    z-index: 0;
 }
 .introduction-section{
     height: 100vh;
@@ -163,7 +165,7 @@
     background-image: url("../images/introduction-images/introduction-background-color.jpg");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; 
 }
 .introduction-texts-wrapper{
     row-gap: 35px;
@@ -197,22 +199,12 @@
     fill:  var(--primary-text-color);
     animation: introduction-section-down-arrow-animation 1.5s ease-in-out infinite paused;
 }
-.test-section{
-    position: relative;
-    background-color: #ff1900;
-    z-index: 99;
-    left: 0px;
-    width: 100px;
-}
-.test-h2{
-    width: 100px;
-    position: absolute;
-    z-index: 6;
-    background-color: green;
-    left: 0;
-    top: 0;
-}
 /* <for stream section */
+.common-section.others{
+    height: 80vh;
+    background-color: skyblue;
+    border: 5px solid black;
+}
 /* for animations> */
 @keyframes introduction-section-down-arrow-animation{
     0%{
