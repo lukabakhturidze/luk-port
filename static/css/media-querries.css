@@ -1,5 +1,5 @@
 :root{
-    --tablet-title-font-size: 25px;
+    --tablet-title-font-size: 35px;
     --tablet-title-line-height: 40px;
     --tablet-secondary-title-font-size: 26px;
     --tablet-secondary-title-line-height: 30px;
@@ -26,6 +26,8 @@
     .header-nav-socials{
         column-gap: 15px;
     }
+    
+
 }
 @media(max-width: 1024px){
     /* for common tags> */
@@ -38,6 +40,10 @@
         line-height: var(--tablet-extra-larger-text-line-height);
     }
     .larger-text-size{
+        font-size: var(--tablet-larger-text-font-size);
+        line-height: var(--tablet-larger-text-line-height);
+    }
+    .larger-regular-text-size{
         font-size: var(--tablet-larger-text-font-size);
         line-height: var(--tablet-larger-text-line-height);
     }
@@ -56,7 +62,6 @@
         width: 100%;
         position: fixed;
         padding: 30px 0;
-        z-index: 1;
         border-bottom: 2px solid var(--primary-text-color);
     }
     .header-profile-part{
@@ -83,6 +88,8 @@
     .header-nav-ul li{
         width: 90%;
         text-align: left;
+    }
+    .header-nav-ul li:not(:last-child){
         border-bottom: 1px solid var(--primary-text-color);
     }
     .header-nav-ul li:hover{
@@ -113,20 +120,47 @@
         height: 4px;
         background-color: var(--primary-text-color);
     }
-    .typing-text-open-window{
-        height: var(--tablet-title-line-height);
-    }
     /* <for header */
     /* for main stream> */
+    /* for introduction section> */
     .main-stream{
         width: 100%;
     }
     .introduction-section{
         height: 100vh;
     }
+    .typing-text-open-window{
+        height: var(--tablet-title-line-height);
+    }
+    /* <for introduction section */
+    /* for about me section> */
+    
+    /* <for about me section */
     /* <for main stream */
 }
 @media(max-width: 768px){
+    /* for common tags> */
+    .common-section{
+        padding: 90px 0;
+    }
+    /* <for common tags */
+    /* for about me section> */
+    .about-me-section-middle-wrapper{
+        flex-direction: column;
+        row-gap: 3vh;
+        align-items: center;
+    }
+    .about-me-section-middle-wrapper .texts{
+        width: 100%;
+        align-items: center;
+    }
+    .about-me-section-middle-wrapper .texts p{
+        text-align: center;
+    }
+    .about-me-ul{
+        width: 100%;
+    }
+    /* <for about me section */
 }
 @media(max-width: 500px){
     /* for common tags> */
@@ -145,6 +179,10 @@
         font-size: var(--mobile-larger-text-font-size);
         line-height: var(--mobile-larger-text-line-height);
     }
+    .larger-regular-text-size{
+        font-size: var(--mobile-larger-text-font-size);
+        line-height: var(--mobile-larger-text-line-height);
+    }
     .standard-text-size{
         font-size: var(--mobile-standard-text-font-size);
         line-height: var(--mobile-standard-text-line-height);
@@ -154,8 +192,30 @@
         line-height: var(--mobile-secondary-title-line-height);
     }
     /* <for common tags> */
+    /* for header> */
+    .header-nav-socials-li.active{
+        margin-top: 0.6em;
+        display: block;
+    }
+    .header-nav-socials.active{
+        display: flex;
+    }
+    .header-nav-socials.active{
+        width: 100%;
+        justify-content: space-around;
+    }
+    .header-nav-socials.active li{
+        width: max-content;
+        border-bottom: 1px solid var(--primary-red);
+    }
+    .header-icon-description{
+        top: -20px;
+    }
+    /* <for header */
+    /* for introduction section> */
     .typing-text-open-window{
         overflow: hidden;
         height: var(--mobile-title-line-height);
     }
+    /* <for introduction section */
 }

@@ -11,6 +11,9 @@
     --standard-text-line-height: 16px;
     --primary-red:#ff1900; 
     --primary-text-color: whitesmoke;
+    --first-type-section-background-color: #212529;
+    --primary-gray: #7f8d98e8;
+    --common-title-background-text-color: #6d767e66;
 }
 /* my library> */
 .display-flex{
@@ -28,8 +31,14 @@
 .align-items-center{
     align-items:center;
 }
+.flex-wrap-wrap{
+    flex-wrap: wrap;
+}
 .text-align-center{
     text-align: center; 
+}
+.primary-gray{
+    color: var(--primary-gray);
 }
 /* <my linrary */
 /* for common classes> */
@@ -48,7 +57,13 @@
 .larger-text-size{
     font-size: var(--larger-text-font-size);
     line-height: var(--larger-text-line-height);
-    font-family:'andada-medium';
+    font-family:'andada-semibold';
+    color: var(--primary-text-color);
+}
+.larger-regular-text-size{
+    font-size: var(--larger-text-font-size);
+    line-height: var(--larger-text-line-height);
+    font-family:'rufina-regular';
     color: var(--primary-text-color);
 }
 .standard-text-size{
@@ -65,6 +80,9 @@
 .red{
     color: var(--primary-red);
 }
+.left-header .larger-text-size .scroll-indicator .red{
+    color: var(--primary-red);
+}
 .flex-container{
     width: 90%;
     margin: 0 auto;
@@ -78,6 +96,56 @@
 .common-red-text-shadow{
     text-shadow: 0 0 px var(--primary-red);
 }
+.common-section{
+    color: var(--primary-text-color);
+    padding: 120px 0;
+}
+.common-title{
+    position: relative;
+    z-index: 0;
+    text-align: center;
+}
+.common-title::before{
+    content: 'ABOUT ME';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--common-title-background-text-color);
+    width: max-content;
+    font-size: 2.2em;
+    z-index: -1;
+}
+.common-title::after{
+    content: '';
+    position: absolute;
+    bottom: -0.1em;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 3em;
+    height: 0.1em;
+    background-color: var(--primary-red);
+}
+.width-100{
+    width: 100%;
+}
+.common-bottom-line{
+    border-bottom: 1px solid var(--common-title-background-text-color);
+}
+.common-paragraph{
+    margin-top: 2vh;
+}
+.red-common-button{
+    padding: 0.7em 1.5em;
+    border-radius: 30px;
+    background-color: var(--primary-gray);
+    border: 2px solid var(--primary-text-color);
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+.red-common-button:hover{
+    background-color: var(--primary-red);
+    border: 2px solid var(--primary-gray);
+}
 /* <for common classes */
 /* for left header> */
 .left-header{
@@ -88,10 +156,9 @@
     left: 0;
     padding: 35px 0 25px 0;
     background-color: rgb(20, 20, 20);
-    z-index: 1;
+    z-index: 10;
 }
 .left-header .title-size,.left-header .extra-larger-text-size,.left-header .larger-text-size,.left-meheadernu .standard-text-size{
-    color: white;
     transition: all 0.2s ease-out;
 }
 .left-header .title-size:hover,.left-header .extra-larger-text-size:hover,.left-header .larger-text-size:hover,.left-header .standard-text-size:hover{
@@ -105,9 +172,6 @@
 }
 .header-profile-part{
     row-gap: 20px;
-}
-.left-header .red{
-    color: var(--primary-red);
 }
 .header-profile-part img{
     width: 75%;
@@ -123,7 +187,7 @@
     border-bottom: 2px solid var(--primary-red);
 }
 .header-nav-socials{
-    column-gap: 30px;
+    column-gap: 20px;
 }
 .header-nav-socials svg{
     transition: all 0.2s ease-out;
@@ -152,12 +216,15 @@
 .burger-menu{
     display: none;
 }
+.header-nav-socials-li.active, .header-nav-socials.active{
+    display: none;
+}
 /* <for left  header */
 /* for stream section> */
 .main-stream{
     width: 82%;
     margin-left:auto;
-    z-index: 0;
+    z-index: 5;
 }
 .introduction-section{
     height: 100vh;
@@ -165,7 +232,7 @@
     background-image: url("../images/introduction-images/introduction-background-color.jpg");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover; 
+    background-size: cover;
 }
 .introduction-texts-wrapper{
     row-gap: 35px;
@@ -200,11 +267,30 @@
     animation: introduction-section-down-arrow-animation 1.5s ease-in-out infinite paused;
 }
 /* <for stream section */
+/* for about me section> */
 .common-section.others{
     height: 80vh;
     background-color: skyblue;
     border: 5px solid black;
 }
+.first-type-section{
+    background-color: var(--first-type-section-background-color);
+}
+.about-me-section{
+    row-gap: 8vh;
+}
+.about-me-section-middle-wrapper .texts{
+    width: 60%;
+    row-gap: 2.5vh;
+}
+.about-me-ul{
+    width: 32%;
+}
+.about-me-li{
+    padding: 0.7em;
+    column-gap: 5px;
+}
+/* <for about me section */
 /* for animations> */
 @keyframes introduction-section-down-arrow-animation{
     0%{
