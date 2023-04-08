@@ -37,8 +37,8 @@
 .text-align-center{
     text-align: center; 
 }
-.primary-gray{
-    color: var(--primary-gray);
+.display-grid{
+    display: grid;
 }
 /* <my linrary */
 /* for common classes> */
@@ -79,6 +79,9 @@
 }
 .red{
     color: var(--primary-red);
+}
+.primary-gray{
+    color: var(--primary-gray);
 }
 .left-header .larger-text-size .scroll-indicator .red{
     color: var(--primary-red);
@@ -130,6 +133,9 @@
 }
 .common-bottom-line{
     border-bottom: 1px solid var(--common-title-background-text-color);
+}
+.common-right-line{
+    border-right: 1px solid var(--common-title-background-text-color);
 }
 .common-paragraph{
     margin-top: 2vh;
@@ -289,6 +295,15 @@
 .about-me-li{
     padding: 0.7em;
     column-gap: 5px;
+}
+.about-me-section-bottom-wrapper{
+    grid-template: max-content / repeat(4, 25%);
+}
+.about-me-section-bottom-wrapper .about-me-static{
+    padding: 1em 5px;
+}
+.about-me-section-bottom-wrapper .about-me-static:not(:last-child){
+    border-right: 1px solid var(--common-title-background-text-color);
 }
 /* <for about me section */
 /* for animations> */

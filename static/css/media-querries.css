@@ -2,7 +2,7 @@
     --tablet-title-font-size: 35px;
     --tablet-title-line-height: 40px;
     --tablet-secondary-title-font-size: 26px;
-    --tablet-secondary-title-line-height: 30px;
+    --tablet-secondary-title-line-height: 35px;
     --tablet-extra-larger-text-font-size: 20px;
     --tablet-extra-larger-text-line-height: 24px;
     --tablet-larger-text-font-size: 14px;
@@ -26,8 +26,6 @@
     .header-nav-socials{
         column-gap: 15px;
     }
-    
-
 }
 @media(max-width: 1024px){
     /* for common tags> */
@@ -159,6 +157,13 @@
     }
     .about-me-ul{
         width: 100%;
+    }
+    .about-me-section-bottom-wrapper{
+        grid-template-columns: repeat(2, 50%);
+        gap: 2vh 0;
+    }
+    .about-me-section-bottom-wrapper .about-me-static:nth-child(2){
+        border: none;
     }
     /* <for about me section */
 }
