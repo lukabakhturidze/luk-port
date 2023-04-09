@@ -7,8 +7,8 @@
     --tablet-extra-larger-text-line-height: 24px;
     --tablet-larger-text-font-size: 14px;
     --tablet-larger-text-line-height: 16px;
-    --tablet-standard-text-font-size: 10px;
-    --tablet-standard-text-line-height: 11px;
+    --tablet-standard-text-font-size: 13px;
+    --tablet-standard-text-line-height: 15px;
 
     --mobile-title-font-size: 20px;
     --mobile-title-line-height: 25px;
@@ -18,8 +18,8 @@
     --mobile-extra-larger-text-line-height: 20px;
     --mobile-larger-text-font-size: 12px;
     --mobile-larger-text-line-height: 14px;
-    --mobile-standard-text-font-size: 9px;
-    --mobile-standard-text-line-height: 11px;
+    --mobile-standard-text-font-size: 10px;
+    --mobile-standard-text-line-height: 12px;
     --primary-red:#ff1900; 
 }
 @media(max-width: 1200px){
@@ -131,9 +131,11 @@
         height: var(--tablet-title-line-height);
     }
     /* <for introduction section */
-    /* for about me section> */
-    
-    /* <for about me section */
+    /* for my works section> */
+    .my-works-list{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    /* <for my works section */
     /* <for main stream */
 }
 @media(max-width: 768px){
@@ -166,6 +168,29 @@
         border: none;
     }
     /* <for about me section */
+    /* for resume section> */
+    .resume-middle-wrapper{
+        grid-template-columns: 1fr;
+        row-gap: 5%;
+    }
+    .resume-card{
+        box-shadow: none;
+        padding: 1.3em;
+    }
+    .resume-skills-wrapper{
+        grid-template-columns: 1fr;
+    }
+    /* <for resume section */
+    /* for my works section> */
+    .my-works-nav{
+        flex-direction: column;
+        align-items: center;
+        row-gap: 1vh;
+    }
+    .my-works-list{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    /* <for my works section */
 }
 @media(max-width: 500px){
     /* for common tags> */
@@ -196,6 +221,9 @@
         font-size: var(--mobile-secondary-title-font-size);
         line-height: var(--mobile-secondary-title-line-height);
     }
+    .common-title::before{
+        font-size: 2em;
+    }
     /* <for common tags> */
     /* for header> */
     .header-nav-socials-li.active{
@@ -223,4 +251,5 @@
         height: var(--mobile-title-line-height);
     }
     /* <for introduction section */
+
 }

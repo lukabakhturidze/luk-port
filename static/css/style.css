@@ -8,12 +8,14 @@
     --larger-text-font-size: 20px;
     --larger-text-line-height: 25px;
     --standard-text-font-size: 14px;
-    --standard-text-line-height: 16px;
+    --standard-text-line-height: 20px;
     --primary-red:#ff1900; 
     --primary-text-color: whitesmoke;
     --first-type-section-background-color: #212529;
+    --second-type-section-background-color: #343a40;
     --primary-gray: #7f8d98e8;
     --common-title-background-text-color: #6d767e66;
+    --resume-card-background-color: #171c20;
 }
 /* my library> */
 .display-flex{
@@ -86,7 +88,13 @@
 .left-header .larger-text-size .scroll-indicator .red{
     color: var(--primary-red);
 }
+.primary-container{
+    max-width: 1500px;
+    width: 90%;
+    margin: 0 auto;
+}
 .flex-container{
+    max-width: 1500px;
     width: 90%;
     margin: 0 auto;
     display: flex;
@@ -97,11 +105,17 @@
     text-shadow: 0 0 5px var(--primary-text-color);
 }
 .common-red-text-shadow{
-    text-shadow: 0 0 px var(--primary-red);
+    text-shadow: 0 0 0 var(--primary-red);
+}
+.common-dark-text-shadow{
+    text-shadow: 0 0 0 var(--first-type-section-background-color) 
 }
 .common-section{
     color: var(--primary-text-color);
-    padding: 120px 0;
+    padding: 110px 0;
+}
+.common-section-row-gap{
+    row-gap: 10vh;
 }
 .common-title{
     position: relative;
@@ -109,7 +123,6 @@
     text-align: center;
 }
 .common-title::before{
-    content: 'ABOUT ME';
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -117,6 +130,15 @@
     width: max-content;
     font-size: 2.2em;
     z-index: -1;
+}
+.common-section:nth-child(2) .common-title::before{
+    content: 'ABOUT ME';
+}
+.common-section:nth-child(3) .common-title::before{
+    content: 'SUMMARY';
+}
+.common-section:nth-child(4) .common-title::before{
+    content: 'PORTFOLIO';
 }
 .common-title::after{
     content: '';
@@ -127,12 +149,16 @@
     width: 3em;
     height: 0.1em;
     background-color: var(--primary-red);
+    border-radius: 5px;
 }
 .width-100{
     width: 100%;
 }
 .common-bottom-line{
     border-bottom: 1px solid var(--common-title-background-text-color);
+}
+.common-red-bottom-line{
+    border-bottom: 1px solid var(--primary-red);
 }
 .common-right-line{
     border-right: 1px solid var(--common-title-background-text-color);
@@ -151,6 +177,12 @@
 .red-common-button:hover{
     background-color: var(--primary-red);
     border: 2px solid var(--primary-gray);
+}
+.first-type-section{
+    background-color: var(--first-type-section-background-color);
+}
+.second-type-section{
+    background-color: var(--second-type-section-background-color);
 }
 /* <for common classes */
 /* for left header> */
@@ -279,12 +311,6 @@
     background-color: skyblue;
     border: 5px solid black;
 }
-.first-type-section{
-    background-color: var(--first-type-section-background-color);
-}
-.about-me-section{
-    row-gap: 8vh;
-}
 .about-me-section-middle-wrapper .texts{
     width: 60%;
     row-gap: 2.5vh;
@@ -306,6 +332,124 @@
     border-right: 1px solid var(--common-title-background-text-color);
 }
 /* <for about me section */
+/* for resume section> */
+.resume-middle-wrapper{
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 5%;
+}
+.resume-middle-column{
+    row-gap: 3vh;
+}
+.resume-card{
+    row-gap: 1.3em;
+    padding: 1.2em;
+    border-radius: 0.5em;
+    background-color: var(--resume-card-background-color);
+    box-shadow: var(--common-title-background-text-color) 0px 0px 20px 0px;
+}
+.resume-card .date{
+    width: max-content;
+    padding: 0.5em;
+    background-color: var(--primary-red);
+    border-radius: 0.5em;
+}
+.resume-bottom-wrapper{
+    row-gap: 4vh;
+}
+.resume-skills-wrapper{
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 5%;
+    row-gap: 4vh;
+}
+.resume-one-skill-wrapper{
+    row-gap: 1em;
+}
+.resume-skill-wrapper-texts{
+    padding:0 0.5em;
+} 
+.outer-line{
+    width: 100%;
+    height: 15px;
+    background-color:var(--resume-card-background-color);
+    border-radius: 10px;
+    overflow: hidden;
+}
+.inner-line{
+    height: 100%;
+    background-image: linear-gradient(to right, var(--resume-card-background-color) 5%, var(--primary-red));
+}
+.resume-one-skill-wrapper:nth-child(1) .inner-line{
+    width: 70%;
+}
+.resume-one-skill-wrapper:nth-child(2) .inner-line{
+    width: 5%;
+}
+.resume-one-skill-wrapper:nth-child(3) .inner-line{
+    width: 5%;
+}
+.resume-one-skill-wrapper:nth-child(4) .inner-line{
+    width: 10%;
+}
+/* <for resume section */
+/* for my works section> */
+.my-works-wrapper{
+    row-gap: 6vh;
+}
+.my-works-nav{
+    column-gap: 1em;
+}
+.my-works-nav-ul{
+    column-gap: 1em;
+}
+.my-works-nav-li h3{
+    padding: 0.2em 0.4em;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+.my-works-nav-li h3:hover{
+    color: var(--primary-red);
+}
+.my-works-list{
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 4vh;
+    row-gap: 4vh;
+}
+.my-works-card-wrapper{
+    position: relative;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid transparent;
+}
+.my-works-card-wrapper:hover{
+    border: 1px solid var(--primary-red);
+    transition: all 0.4s linear;
+}
+.my-works-card-wrapper img{
+    width: 100%;
+    height: 100%;
+}
+.my-works-card-content-wrapper{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    color: var(--primary-text-color);
+    opacity: 0;
+    cursor: pointer;
+    transition: all 0.4s linear;
+}
+.my-works-card-content-wrapper:hover{
+    opacity: 1;
+    background-color: #31373ed1;
+}
+.my-works-card-wrapper{
+    display: none;
+}
+.my-works-card-wrapper.active{
+    display: block;
+}
+/* <for my works section */
 /* for animations> */
 @keyframes introduction-section-down-arrow-animation{
     0%{
