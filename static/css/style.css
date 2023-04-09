@@ -140,6 +140,9 @@
 .common-section:nth-child(4) .common-title::before{
     content: 'PORTFOLIO';
 }
+.common-section:nth-child(5) .common-title::before{
+    content: 'CONTACT';
+}
 .common-title::after{
     content: '';
     position: absolute;
@@ -306,11 +309,6 @@
 }
 /* <for stream section */
 /* for about me section> */
-.common-section.others{
-    height: 80vh;
-    background-color: skyblue;
-    border: 5px solid black;
-}
 .about-me-section-middle-wrapper .texts{
     width: 60%;
     row-gap: 2.5vh;
@@ -345,7 +343,7 @@
     padding: 1.2em;
     border-radius: 0.5em;
     background-color: var(--resume-card-background-color);
-    box-shadow: var(--common-title-background-text-color) 0px 0px 20px 0px;
+    box-shadow: var(--common-title-background-text-color) 0px 0px 7px 0px;
 }
 .resume-card .date{
     width: max-content;
@@ -441,7 +439,7 @@
 }
 .my-works-card-content-wrapper:hover{
     opacity: 1;
-    background-color: #31373ed1;
+    background-color: #292e34e4;
 }
 .my-works-card-wrapper{
     display: none;
