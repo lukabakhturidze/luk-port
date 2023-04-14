@@ -135,7 +135,7 @@
         width: 100%;
     }
     .introduction-section{
-        height: 100vh;
+        height: calc(100vh - 108.6px);
     }
     .typing-text-open-window{
         height: var(--tablet-title-line-height);
@@ -289,6 +289,9 @@
     .typing-text-open-window{
         overflow: hidden;
         height: var(--mobile-title-line-height);
+    }
+    .introduction-section{
+        height: calc(100vh - 101.6px);
     }
     /* <for introduction section */
     /* for contact section> */
