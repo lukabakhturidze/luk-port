@@ -112,7 +112,7 @@
 }
 .common-section{
     color: var(--primary-text-color);
-    padding: 110px 0;
+    padding: 100px 0;
 }
 .common-section-row-gap{
     row-gap: 10vh;
@@ -518,6 +518,12 @@ svg{
     resize: vertical;
 }
 /* <for contact section */
+.footer-right-content{
+    column-gap: 1em;
+}
+.policy, .disclaimer{
+    cursor: pointer;
+}
 /* for animations> */
 @keyframes introduction-section-down-arrow-animation{
     0%{

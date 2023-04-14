@@ -221,6 +221,11 @@
         justify-content: center;
     }
     /* <for contact section */
+    .footer-content{
+        flex-direction: column;
+        align-items: center;
+        row-gap: 2em;
+    }
 }
 @media(max-width: 500px){
     /* for common tags> */
