@@ -518,12 +518,14 @@ svg{
     resize: vertical;
 }
 /* <for contact section */
+/* for footer> */
 .footer-right-content{
     column-gap: 1em;
 }
 .policy, .disclaimer{
     cursor: pointer;
 }
+/* <for footer */
 /* for animations> */
 @keyframes introduction-section-down-arrow-animation{
     0%{

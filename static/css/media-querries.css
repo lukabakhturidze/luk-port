@@ -221,11 +221,13 @@
         justify-content: center;
     }
     /* <for contact section */
+    /* for footer> */
     .footer-content{
         flex-direction: column;
         align-items: center;
         row-gap: 2em;
     }
+    /* <for footer */
 }
 @media(max-width: 500px){
     /* for common tags> */

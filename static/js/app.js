@@ -92,6 +92,16 @@ burgerMenu.addEventListener('click', burgerMenuActivation);
 //<burger menu close-open handler
 
 //scroll indicator handler>
+function getMudule(number){
+    if(number >= 0)
+    {
+        return number;
+    }
+    else
+    {
+        return -number;
+    }
+}
 function scrollIndicatorHandler(){
     sections.forEach((section, index) => {
         let sectionDistanceFromTop = section.offsetTop;
@@ -99,7 +109,7 @@ function scrollIndicatorHandler(){
         let lastElementQuantifier = index - (sections.length -1);
         switch(lastElementQuantifier){
             case 0:
-                if(window.pageYOffset >= (sectionDistanceFromTop - (window.outerHeight - sectionHeight)) && window.pageYOffset < (sectionDistanceFromTop + sectionHeight - (window.outerHeight - sectionHeight))){
+                if(window.pageYOffset >= (sectionDistanceFromTop - (getMudule(window.outerHeight - sectionHeight))) && window.pageYOffset < (sectionDistanceFromTop + sectionHeight - (getMudule(window.outerHeight - sectionHeight)))){
                     scrollIndicators[index].classList.add("red");
                 }
                 else{
@@ -107,7 +117,7 @@ function scrollIndicatorHandler(){
                 }
                 break;
             default:
-                if(window.pageYOffset >= (sectionDistanceFromTop - (window.outerHeight - sectionHeight)) && window.pageYOffset < (sections[index + 1].offsetTop - (window.outerHeight - sections[index + 1].offsetHeight))){
+                if(window.pageYOffset >= (sectionDistanceFromTop - (getMudule(window.outerHeight - sectionHeight))) && window.pageYOffset < (sections[index + 1].offsetTop - (getMudule(window.outerHeight - sections[index + 1].offsetHeight)))){
                     scrollIndicators[index].classList.add("red");
                 }
                 else{
