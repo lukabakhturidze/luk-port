@@ -112,7 +112,7 @@
 }
 .common-section{
     color: var(--primary-text-color);
-    padding: 100px 0;
+    padding: 110px 0;
 }
 .common-section-row-gap{
     row-gap: 10vh;
@@ -288,14 +288,14 @@ svg{
     margin-left: 10px;
     row-gap: 2px;
     overflow: hidden;
-    animation: typing-text-alter 12s steps(2, end) infinite backwards paused;
+    animation: typing-text-alter 12s steps(2, end) infinite backwards;
 }
 .typing-text{
     width: 0;
     white-space:nowrap;
     overflow: hidden;
     border-right: 5px solid var(--primary-text-color);
-    animation: typing-animation 3s steps(20, end) infinite alternate paused, cursor-animation 0.7s infinite normal forwards paused;
+    animation: typing-animation 3s steps(20, end) infinite alternate, cursor-animation 0.7s infinite normal forwards;
 }
 .introduction-down-arrow{
     height: 90px;
@@ -306,7 +306,7 @@ svg{
 }
 .introduction-down-arrow svg{
     fill:  var(--primary-text-color);
-    animation: introduction-section-down-arrow-animation 1.5s ease-in-out infinite paused;
+    animation: introduction-section-down-arrow-animation 1.5s ease-in-out infinite;
 }
 /* <for stream section */
 /* for about me section> */
@@ -520,7 +520,7 @@ svg{
 /* <for contact section */
 /* for footer> */
 .footer-right-content{
-    column-gap: 1em;
+    column-gap: 2em;
 }
 .policy, .disclaimer{
     cursor: pointer;
