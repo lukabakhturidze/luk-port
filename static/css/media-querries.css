@@ -23,9 +23,16 @@
     --primary-red:#ff1900; 
 }
 @media(max-width: 1200px){
+    /* for header> */
     .header-nav-socials{
         column-gap: 15px;
     }
+    /* <for header */
+    /* for contact section> */
+    .contact-right-part{
+        width: 55%;
+    }
+    /* <for contact section */
 }
 @media(max-width: 1024px){
     /* for common tags> */
@@ -136,6 +143,10 @@
         grid-template-columns: repeat(2, 1fr);
     }
     /* <for my works section */
+    /* for contact section> */
+    .contact-right-part{
+        width: 60%;
+    }
     /* <for main stream */
 }
 @media(max-width: 768px){
@@ -191,6 +202,25 @@
         grid-template-columns: repeat(2, 1fr);
     }
     /* <for my works section */
+    /* for contact section> */
+    .contact-middle-wrapper{
+        flex-direction: column-reverse;
+        row-gap: 3vh;
+        align-items: center;
+    }
+    .contact-right-part{
+        width: 100%;
+    }
+    .contact-inputs-wrapper input{
+        width: 100%;
+    }
+    .addresses, .follow-me{
+        align-items: center;
+    }
+    .addresses li, .follow-me li{
+        justify-content: center;
+    }
+    /* <for contact section */
 }
 @media(max-width: 500px){
     /* for common tags> */
@@ -251,5 +281,16 @@
         height: var(--mobile-title-line-height);
     }
     /* <for introduction section */
-
+    /* for contact section> */
+    .contact-inputs-wrapper{
+       grid-template: repeat(2, min-content) 3fr / 1fr;
+       column-gap: 0;
+    }
+    .contact-inputs-wrapper input{
+        width: 100%;
+    }
+    .contact-inputs-wrapper input:nth-child(2){
+        grid-row: 2 / 3;
+    }
+    /* <for contact section */
 }
