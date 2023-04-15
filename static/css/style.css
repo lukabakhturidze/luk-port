@@ -16,10 +16,16 @@
     --primary-gray: #7f8d98e8;
     --common-title-background-text-color: #6d767e66;
     --resume-card-background-color: #171c20;
+    --my-works-card-hover-color: #292e34e4;
+    --modal-background-color: #000000b8;
+    --modal-content-background-color: #30353b;
 }
 /* my library> */
 .display-flex{
     display: flex;
+}
+.display-none{
+    display: none;
 }
 .flex-direction-column{
     flex-direction: column;
@@ -105,7 +111,7 @@
     text-shadow: 0 0 5px var(--primary-text-color);
 }
 .common-red-text-shadow{
-    text-shadow: 0 0 0 var(--primary-red);
+    text-shadow: 0 0 5px var(--primary-red);
 }
 .common-dark-text-shadow{
     text-shadow: 0 0 0 var(--first-type-section-background-color) 
@@ -188,6 +194,18 @@
 .second-type-section{
     background-color: var(--second-type-section-background-color);
 }
+.overflow-hidden{
+    overflow: hidden;
+}
+.overflow-y-scroll{
+    overflow-y: scroll;
+}
+.list-style-style-decimal{
+    list-style-type: decimal;
+}
+.list-style-style-disc{
+    list-style-type:disc;
+}
 /* <for common classes */
 /* for left header> */
 .left-header{
@@ -266,7 +284,6 @@ svg{
 .main-stream{
     width: 82%;
     margin-left:auto;
-    z-index: 5;
 }
 .introduction-section{
     height: 100vh;
@@ -288,14 +305,14 @@ svg{
     margin-left: 10px;
     row-gap: 2px;
     overflow: hidden;
-    animation: typing-text-alter 12s steps(2, end) infinite backwards;
+    animation: typing-text-alter 12s steps(2, end) infinite backwards paused;
 }
 .typing-text{
     width: 0;
     white-space:nowrap;
     overflow: hidden;
     border-right: 5px solid var(--primary-text-color);
-    animation: typing-animation 3s steps(20, end) infinite alternate, cursor-animation 0.7s infinite normal forwards;
+    animation: typing-animation 3s steps(20, end) infinite alternate paused, cursor-animation 0.7s infinite normal forwards paused;
 }
 .introduction-down-arrow{
     height: 90px;
@@ -306,7 +323,7 @@ svg{
 }
 .introduction-down-arrow svg{
     fill:  var(--primary-text-color);
-    animation: introduction-section-down-arrow-animation 1.5s ease-in-out infinite;
+    animation: introduction-section-down-arrow-animation 1.5s ease-in-out infinite paused;
 }
 /* <for stream section */
 /* for about me section> */
@@ -441,7 +458,7 @@ svg{
 }
 .my-works-card-content-wrapper:hover{
     opacity: 1;
-    background-color: #292e34e4;
+    background-color: var(--my-works-card-hover-color);
 }
 .my-works-card-wrapper{
     display: none;
@@ -498,9 +515,13 @@ svg{
     border-radius: 8px;
     border: none;
     background-color: var(--first-type-section-background-color);
+    border: 1px solid transparent;
+    outline: none;
+    transition: all 0.2s linear;
 }
 .contact-right-part form input:focus, .contact-right-part form textarea:focus{
-    outline: 1px solid var(--primary-red);
+    border: 1px solid var(--primary-red);
+    box-shadow: var(--primary-red) 0px 0px 7px 0px;
 }
 .contact-right-part form input{
     padding: 1.2em 1em;
@@ -525,7 +546,70 @@ svg{
 .policy, .disclaimer{
     cursor: pointer;
 }
+.policy:hover, .disclaimer:hover{
+    color: var(--primary-red);
+    text-shadow: 0 0 5px var(--primary-red);
+    transition: all 0.15s linear;
+}
 /* <for footer */
+/* for policy section> */
+.common-modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    padding: 30px 0 0 0;
+    background-color: var(--modal-background-color);
+    z-index: 20;
+}
+.common-modal-content{
+    width: 60%;
+    height: max-content;
+    background: var(--modal-content-background-color);
+    border-radius: 10px;
+}
+.modal-header{
+    padding: 1em 1.5em;
+}
+.modal-close-button{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    row-gap: 10px;
+    cursor: pointer;
+}
+.modal-close-button-line{
+    position: absolute;
+    width: 6px;
+    height: 50px;
+    background-color: var(--primary-text-color);
+    border-radius: 2px;
+    right: 25px;
+    transition: all 0.15s linear;
+}
+.modal-close-button-line:nth-child(1){
+    transform: rotate(45deg);
+}
+.modal-close-button-line:nth-child(2){
+    transform: rotate(-45deg);
+}
+.modal-close-button:hover .modal-close-button-line{
+    background-color: var(--primary-red);
+}
+.modal-body{
+    margin-top: 20px;
+    padding: 1.5em;
+    row-gap: 2em;
+}
+.modal-common-section{
+    row-gap: 1em;
+}
+.modal-ol{
+    margin-left:1.5em;
+    row-gap: 0.5em;
+}
+/* <for policy section */
 /* for animations> */
 @keyframes introduction-section-down-arrow-animation{
     0%{

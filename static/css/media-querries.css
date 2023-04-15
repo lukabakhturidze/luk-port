@@ -8,7 +8,7 @@
     --tablet-larger-text-font-size: 14px;
     --tablet-larger-text-line-height: 16px;
     --tablet-standard-text-font-size: 13px;
-    --tablet-standard-text-line-height: 15px;
+    --tablet-standard-text-line-height: 17px;
 
     --mobile-title-font-size: 20px;
     --mobile-title-line-height: 25px;
@@ -150,6 +150,11 @@
     .contact-right-part{
         width: 60%;
     }
+    /* for policy section> */
+    .common-modal-content{
+        width: 75%;
+    }
+    /* <for policy section */
     /* <for main stream */
 }
 @media(max-width: 768px){
@@ -306,4 +311,9 @@
         grid-row: 2 / 3;
     }
     /* <for contact section */
+    /* for policy section> */
+    .common-modal-content{
+        width: 100%;
+    }
+    /* <for policy section */
 }

@@ -14,6 +14,50 @@ const portfolio = document.querySelectorAll(".portfolio");
 const SNW = document.querySelectorAll(".Social-Networking-website");
 const myWorkButtons = document.querySelectorAll(".myWorkButtons");
 //<my works variables
+//modal variables>
+const policyButton = document.querySelector(".policy");
+const policyModal = document.querySelector(".policy-modal");
+const closeModalButton = document.querySelectorAll(".modal-close-button");
+const disclaimerButton = document.querySelector(".disclaimer");
+const disclaimerModal = document.querySelector(".disclaimer-modal");
+//<modal variables
+
+//modal activation>
+function activateCloseModal(modal){
+    modal.classList.toggle('display-none');
+    modal.classList.toggle('overflow-y-scroll');
+    document.body.classList.toggle('overflow-hidden');
+}
+policyButton.addEventListener("click", () =>{
+    activateCloseModal(policyModal);
+});
+closeModalButton[0].addEventListener("click", () =>{
+    activateCloseModal(policyModal);
+});
+disclaimerButton.addEventListener("click", () =>{
+    activateCloseModal(disclaimerModal);
+});
+closeModalButton[1].addEventListener("click", () =>{
+    activateCloseModal(disclaimerModal);
+});
+window.addEventListener("click", (e) =>{
+    if(e.target == policyModal)
+    {
+        activateCloseModal(policyModal);
+    }
+    else if(e.target == disclaimerModal)
+    {
+        activateCloseModal(disclaimerModal);
+    }
+    else
+    {
+    }
+    
+});
+//<modal activation
+
+
+
 
 //my works divisor>
 function addActiveClassForMyWorks(type)
@@ -86,6 +130,11 @@ myWorksDivisor();
 
 //burger menu close-open handler>
 function burgerMenuActivation(){
+    scrollIndicators.forEach((indicator) =>{
+        indicator.addEventListener('click', ()=>{
+            activatedHeader.classList.remove('header-nav-ul-active');
+        })
+    })
     activatedHeader.classList.toggle('header-nav-ul-active');
 }
 burgerMenu.addEventListener('click', burgerMenuActivation);
