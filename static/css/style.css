@@ -9,7 +9,7 @@
     --larger-text-line-height: 25px;
     --standard-text-font-size: 14px;
     --standard-text-line-height: 20px;
-    --primary-red:#ff1900; 
+    --primary-red:#ff1900;
     --primary-text-color: whitesmoke;
     --first-type-section-background-color: #212529;
     --second-type-section-background-color: #343a40;
@@ -43,7 +43,7 @@
     flex-wrap: wrap;
 }
 .text-align-center{
-    text-align: center; 
+    text-align: center;
 }
 .display-grid{
     display: grid;
@@ -114,7 +114,7 @@
     text-shadow: 0 0 5px var(--primary-red);
 }
 .common-dark-text-shadow{
-    text-shadow: 0 0 0 var(--first-type-section-background-color) 
+    text-shadow: 0 0 0 var(--first-type-section-background-color)
 }
 .common-section{
     color: var(--primary-text-color);
@@ -280,6 +280,66 @@ svg{
     display: none;
 }
 /* <for left  header */
+/* for scroll up button> */
+.scroll-up{
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    bottom: 2vh;
+    right: 0;
+    transform: translateX(300%);
+    z-index: 15;
+    opacity: 0;
+    border-radius: 50%;
+    background-color: var(--my-works-card-hover-color);
+    transition: transform 0.5s linear, opacity 0.2s ease-out;
+}
+.scroll-up-arrow{
+    position: relative;
+    height: 100%;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 2px solid var(--primary-text-color);
+    transition: all 0.2s linear;
+}
+.scroll-up-arrow:hover {
+    background-color: var(--primary-red);
+}
+.scroll-up.activated{
+    transform: translateX(0);
+    right: 2%;
+    opacity: 1;
+}
+.scroll-up-arrow-text{
+    opacity: 0;
+    transition: all 0.2s linear;
+}
+.scroll-up-arrow:hover + .scroll-up-arrow-text{
+    opacity: 1;
+}
+.scroll-up-arrow-line{
+    height: 14px;
+    width: 3px;
+    position: absolute;
+    top: 35%;
+    background-color: var(--primary-text-color);
+}
+.scroll-up-arrow-line:nth-child(1){
+    transform: rotate(45deg);
+    right: 55%;
+}
+.scroll-up-arrow-line:nth-child(2){
+    transform: rotate(-45deg);
+    left: 55%;
+}
+.scroll-up h5{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 110%;
+    width: max-content;
+}
+/* <for scroll up button */
 /* for stream section> */
 .main-stream{
     width: 82%;
@@ -305,14 +365,14 @@ svg{
     margin-left: 10px;
     row-gap: 2px;
     overflow: hidden;
-    animation: typing-text-alter 12s steps(2, end) infinite backwards paused;
+    animation: typing-text-alter 12s steps(2, end) infinite backwards;
 }
 .typing-text{
     width: 0;
     white-space:nowrap;
     overflow: hidden;
     border-right: 5px solid var(--primary-text-color);
-    animation: typing-animation 3s steps(20, end) infinite alternate paused, cursor-animation 0.7s infinite normal forwards paused;
+    animation: typing-animation 3s steps(20, end) infinite alternate, cursor-animation 0.7s infinite normal forwards;
 }
 .introduction-down-arrow{
     height: 90px;
@@ -323,7 +383,7 @@ svg{
 }
 .introduction-down-arrow svg{
     fill:  var(--primary-text-color);
-    animation: introduction-section-down-arrow-animation 1.5s ease-in-out infinite paused;
+    animation: introduction-section-down-arrow-animation 1.5s ease-in-out infinite;
 }
 /* <for stream section */
 /* for about me section> */
@@ -382,7 +442,7 @@ svg{
 }
 .resume-skill-wrapper-texts{
     padding:0 0.5em;
-} 
+}
 .outer-line{
     width: 100%;
     height: 15px;
@@ -540,6 +600,10 @@ svg{
 }
 /* <for contact section */
 /* for footer> */
+footer{
+    width: 82%;
+    margin-left:auto;
+}
 .footer-right-content{
     column-gap: 2em;
 }

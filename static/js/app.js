@@ -22,7 +22,25 @@ const disclaimerButton = document.querySelector(".disclaimer");
 const disclaimerModal = document.querySelector(".disclaimer-modal");
 //<modal variables
 
-//modal activation>
+//scroll-up variables>
+const scrollUpButton = document.querySelector(".scroll-up");
+//<scroll-up variables
+//scroll-up button functional>
+document.addEventListener('scroll', () => {
+    if(window.pageYOffset < 500)
+    {
+        scrollUpButton.classList.remove("activated");
+    }
+    else
+    {
+        scrollUpButton.classList.add("activated");
+    }
+});
+scrollUpButton.addEventListener("click", ()=>{
+    window.scrollTo(0, 0);
+});
+//scroll-up button functional>
+//modals activation>
 function activateCloseModal(modal){
     modal.classList.toggle('display-none');
     modal.classList.toggle('overflow-y-scroll');
@@ -54,11 +72,7 @@ window.addEventListener("click", (e) =>{
     }
     
 });
-//<modal activation
-
-
-
-
+//<modals activation
 //my works divisor>
 function addActiveClassForMyWorks(type)
 {

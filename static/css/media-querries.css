@@ -150,6 +150,12 @@
     .contact-right-part{
         width: 60%;
     }
+    /* <for contact section */
+    /* for footer> */
+    footer{
+        width: 100%;
+    }
+    /* <for footer */
     /* for policy section> */
     .common-modal-content{
         width: 75%;
@@ -236,6 +242,11 @@
         row-gap: 2em;
     }
     /* <for footer */
+    /* for scroll up button> */
+    .scroll-up{
+        right: 1%;
+    }
+    /* <for scroll up button */
 }
 @media(max-width: 500px){
     /* for common tags> */
