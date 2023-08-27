@@ -13,6 +13,8 @@ const animation = document.querySelectorAll(".animation");
 const portfolio = document.querySelectorAll(".portfolio");
 const SNW = document.querySelectorAll(".Social-Networking-website");
 const myWorkButtons = document.querySelectorAll(".myWorkButtons");
+const games = document.querySelectorAll(".game");
+const serviceSite = document.querySelectorAll(".service-site");
 //<my works variables
 //modal variables>
 const policyButton = document.querySelector(".policy");
@@ -76,23 +78,29 @@ window.addEventListener("click", (e) =>{
 //my works divisor>
 function addActiveClassForMyWorks(type)
 {
-    type.forEach((button) => {
-        button.classList.add("active");
+    type.forEach((element) => {
+        element.classList.add("active");
     })
 }
-function removeActiveClassForMyWorks(type1, type2, type3, type4)
+function removeActiveClassForMyWorks(type1, type2, type3, type4, type5, type6)
 {
-    type1.forEach((button) => {
-        button.classList.remove("active");
+    type1.forEach((element) => {
+        element.classList.remove("active");
     })
-    type2.forEach((button) => {
-        button.classList.remove("active");
+    type2.forEach((element) => {
+        element.classList.remove("active");
     })
-    type3.forEach((button) => {
-        button.classList.remove("active");
+    type3.forEach((element) => {
+        element.classList.remove("active");
     })
-    type4.forEach((button) => {
-        button.classList.remove("active");
+    type4.forEach((element) => {
+        element.classList.remove("active");
+    })
+    type5.forEach((element) => {
+        element.classList.remove("active");
+    })
+    type6.forEach((element) => {
+        element.classList.remove("active");
     })
 }
 function myWorksDivisor(){
@@ -117,20 +125,28 @@ function myWorksDivisor(){
                     addActiveClassForMyWorks(all);
                     break;
                 case 1:
-                    removeActiveClassForMyWorks(all, animation, portfolio, SNW);
+                    removeActiveClassForMyWorks(all, animation, portfolio, SNW, games, serviceSite);
                     addActiveClassForMyWorks(eCommerce);
                     break;
                 case 2:
-                    removeActiveClassForMyWorks(all, eCommerce, portfolio, SNW);
+                    removeActiveClassForMyWorks(all, eCommerce, portfolio, SNW, games, serviceSite);
                     addActiveClassForMyWorks(animation);
                     break;
                 case 3:
-                    removeActiveClassForMyWorks(all, eCommerce, animation, SNW);
+                    removeActiveClassForMyWorks(all, eCommerce, animation, SNW, games, serviceSite);
                     addActiveClassForMyWorks(portfolio);
                     break;
                 case 4:
-                    removeActiveClassForMyWorks(all, eCommerce, animation, portfolio);
+                    removeActiveClassForMyWorks(all, eCommerce, animation, SNW, games, serviceSite);
                     addActiveClassForMyWorks(SNW);
+                    break;
+                case 5:
+                    removeActiveClassForMyWorks(all, eCommerce, animation, SNW, games, serviceSite);
+                    addActiveClassForMyWorks(games);
+                    break;
+                case 6:
+                    removeActiveClassForMyWorks(all, eCommerce, animation, portfolio , SNW, games);
+                    addActiveClassForMyWorks(serviceSite);
                     break;
                 default:
                     break;
